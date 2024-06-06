@@ -1,0 +1,12 @@
+// String is immutable in java
+length of string
+to get the lenght of the string we use 
+string sc = "name";
+int n = sc.length();
+
+string conacation
+str1 ="check";
+str2 = "chec2";
+str3 = str1+str2; 
+
+charAt() to get charter at specfic index in string;
