@@ -10,3 +10,73 @@ str2 = "chec2";
 str3 = str1+str2; 
 
 charAt() to get charter at specfic index in string;
+
+to convert string into lowercase andr remove
+use 
+s = s.toLowerCase().replaceAll("[^A-Za-z0-9]","");
+In Java, the `String` class provides a wide range of methods for manipulating and processing strings. Here are some of the most important functions:
+
+1. **Creating Strings**:
+   - `String str = "Hello, World!";`
+   - `String str = new String("Hello, World!");`
+
+2. **Length of a String**:
+   - `int length = str.length();`
+
+3. **Character at a Specific Index**:
+   - `char ch = str.charAt(5);`
+
+4. **Substring**:
+   - `String substr = str.substring(7);`
+   - `String substr = str.substring(7, 12);`
+
+5. **String Comparison**:
+   - `boolean equals = str.equals("Hello, World!");`
+   - `boolean equalsIgnoreCase = str.equalsIgnoreCase("hello, world!");`
+   - `int compareTo = str.compareTo("Hello, World!");`
+   - `int compareToIgnoreCase = str.compareToIgnoreCase("hello, world!");`
+
+6. **String Searching**:
+   - `int indexOf = str.indexOf('W');`
+   - `int lastIndexOf = str.lastIndexOf('o');`
+   - `boolean contains = str.contains("World");`
+   - `boolean startsWith = str.startsWith("Hello");`
+   - `boolean endsWith = str.endsWith("!");`
+
+7. **Replacing Characters or Substrings**:
+   - `String replacedStr = str.replace('o', 'a');`
+   - `String replacedStr = str.replace("World", "Java");`
+   - `String replacedAll = str.replaceAll("l", "x");`
+
+8. **Trimming Whitespace**:
+   - `String trimmedStr = str.trim();`
+
+9. **Case Conversion**:
+   - `String upperStr = str.toUpperCase();`
+   - `String lowerStr = str.toLowerCase();`
+
+10. **Splitting Strings**:
+    - `String[] parts = str.split(", ");`
+
+11. **Joining Strings**:
+    - `String joinedStr = String.join(", ", "Hello", "World", "Java");`
+
+12. **String Concatenation**:
+    - `String concatStr = str.concat(" How are you?");`
+
+13. **Converting Other Types to String**:
+    - `String valueOfInt = String.valueOf(123);`
+    - `String valueOfChar = String.valueOf('a');`
+    - `String valueOfBoolean = String.valueOf(true);`
+
+14. **Checking if a String is Empty or Blank**:
+    - `boolean isEmpty = str.isEmpty();`
+    - `boolean isBlank = str.isBlank();`  // Available from Java 11 onwards
+
+15. **Formatting Strings**:
+    - `String formattedStr = String.format("My name is %s and I am %d years old.", "John", 25);`
+
+16. **Joining Strings**:
+    - `String joinStr = String.join(", ", "A", "B", "C");`
+
+These methods cover most of the common operations you would need to perform on strings in Java. Understanding and using these methods can help you manipulate strings effectively in your Java programs.
