@@ -80,3 +80,14 @@ In Java, the `String` class provides a wide range of methods for manipulating an
     - `String joinStr = String.join(", ", "A", "B", "C");`
 
 These methods cover most of the common operations you would need to perform on strings in Java. Understanding and using these methods can help you manipulate strings effectively in your Java programs.
+
+string interning
+
+string campere functions
+if(s1.equlas(s2)){
+
+}
+if it is true then it will ruten true if false then false
+String substring
+str.substring(str,0,5)
+to get substring
