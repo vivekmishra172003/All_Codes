@@ -1,5 +1,5 @@
 import java.util.*;
-public class CheckR1{
+public class Check{
     static class Node{
         int data;
         Node left;
@@ -22,6 +22,14 @@ public class CheckR1{
             newNode.right = buildTree(nodes);
             return newNode;
         }
+        public static void preorder(Node root){
+            if(root==null){
+                return;
+            }
+            System.out.print(root.data+" ");
+            preorder(root.left);
+            preorder(root.right);
+        }
     }
     public static void main(String[] args){
         System.out.println("Check the fuck");
@@ -29,6 +37,7 @@ public class CheckR1{
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
         System.out.println(root.data);
+        tree.preorder(root);
         
     }
 }
