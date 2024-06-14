@@ -1,0 +1,5 @@
+optimization :-> min,max
+sorting
+there is no fixed rule
+Definition: Greedy algorithm is the problem solving techinique
+where we make the locally optimum choice at each stage & hopt to achive a global optimum
