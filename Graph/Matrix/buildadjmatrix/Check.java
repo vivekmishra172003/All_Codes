@@ -4,19 +4,17 @@ public class Check {
     private int adjMatrix[][];
     int numVertices;
 
-    // Constructor to initialize the graph with the given number of vertices
+    
     Check(int numVertices) {
         this.numVertices = numVertices;
         adjMatrix = new int[numVertices][numVertices];
     }
 
-    // Method to add an edge between two vertices in the graph
     public void addEdge(int src, int dest) {
         adjMatrix[src][dest] = 1;
         adjMatrix[dest][src] = 1;
     }
 
-    // Method to print the adjacency matrix of the graph
     public void printAdjMatrix() {
         for (int i = 0; i < numVertices; i++) {
             for (int j = 0; j < numVertices; j++) {
@@ -26,8 +24,7 @@ public class Check {
         }
     }
 
-    // Method to perform BFS traversal for all components of the graph
-    public void BFS() { // Removed static keyword
+    public void BFS() {
         boolean[] visited = new boolean[numVertices];
         for (int i = 0; i < numVertices; i++) {
             if (!visited[i]) {
@@ -35,9 +32,7 @@ public class Check {
             }
         }
     }
-
-    // Utility method to perform BFS traversal from a given start vertex
-    public void BFSUtil(int start, boolean[] visited) { // Removed static keyword
+    public void BFSUtil(int start, boolean[] visited) { 
         Queue<Integer> q = new LinkedList<>();
         visited[start] = true;
         q.offer(start);
@@ -68,6 +63,6 @@ public class Check {
         graph.printAdjMatrix();
         
         System.out.println("BFS Traversal:");
-        graph.BFS(); // Removed static keyword
+        graph.BFS(); 
     }
 }
