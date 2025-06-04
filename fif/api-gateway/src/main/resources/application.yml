@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        # User Service Routes (Public endpoints for login/register)
+        - id: user-service-public
+          uri: lb://user-service
+          predicates:
+            - Path=/api/users/register,/api/users/login
+          filters:
+            - RemoveRequestHeader=Authorization
+          # User Service Routes (Protected endpoints) 
+        - id: user-service-protected
+          uri: lb://user-service
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - JwtAuthentication
+        
+        # Deal Service Routes (Protected)
+        - id: deal-service
+          uri: lb://deal-service
+          predicates:
+            - Path=/api/deals/**
+          filters:
+            - JwtAuthentication
+        
+        # Coupon Service Routes (Protected)
+        - id: coupon-service
+          uri: lb://coupon-service
+          predicates:
+            - Path=/api/coupons/**
+          filters:
+            - JwtAuthentication
