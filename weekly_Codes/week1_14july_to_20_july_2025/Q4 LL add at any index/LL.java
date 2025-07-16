@@ -51,13 +51,32 @@ public class LL
         }
         
     }
+    public void add(int index,int data){
+        if(index==0){
+            addFirst(data);
+            return;
+        }
+        Node newNode = new Node(data);
+        Node temp = head;
+        int i =0;
+        while(i<index-1){
+            temp = temp.next;
+            i++;
+        }
+        newNode.next =  temp.next;
+        temp.next = newNode;
+        
+        
+    }
 	public static void main(String[] args) {
 		System.out.println("Hello World");
 		LL ll = new LL();
-		ll.addFirst(1);
-		ll.addFirst(2);
-		ll.addFirst(3);
+
+		ll.addLast(1);
+		ll.addLast(2);
+		ll.addLast(3);
 		ll.addLast(4);
+		ll.add(2,9);
 		ll.Printall();
 		
 	}
