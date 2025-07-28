@@ -1,4 +1,4 @@
-
+import java.util.*;
 class Solution {
     public ArrayList<Integer> calculateSpan(int[] arr) {
         // write code here
